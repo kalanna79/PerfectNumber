@@ -11,6 +11,22 @@ form.addEventListenr("submit", function (event) {
 
 function isPrime(x) {
 	// Check is x is prime
+        if (x == 2) 
+        { return true; }
+
+        if (x%2 == 0)
+            { return false; }
+
+        racine = Math.sqrt(x);
+        if (Number.isInteger(racine))
+            { return false; }
+        for (b=3; b<=racine; b+=2)
+        {
+          if (x%b == 0)
+	     { return false; }
+        }
+        return true;
+
 }
 
 
